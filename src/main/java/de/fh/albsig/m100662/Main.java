@@ -43,9 +43,7 @@ public class Main {
 
     System.out.println("Unit: ");
     String unit = null;
-    logger.info("Unit has been given: " + unit + "\n");
-    logger.info("Creating new number: " + value + " " + unit + "\n");
-
+    
     try {
       if (scanner.hasNext()) {
         unit = scanner.nextLine().trim();
@@ -60,7 +58,8 @@ public class Main {
       logger.error("An error occured while reading the unit: " + e.getMessage());
       return;
     }
-
+    
+    logger.info("Creating new number: " + value + " " + unit + "\n");
     NewNumber inputNumber = NumberFactory.createNewNumber(value, unit);
 
     inputNumber.printNumber();
@@ -71,7 +70,7 @@ public class Main {
       lengthInput.printLengthUnits();
       lengthInput.convertLength();
       logger.info("Converting ...");
-      lengthInput.printNumber();
+      logger.info("Converted number is " + lengthInput.getValue() + " " + lengthInput.getUnit());
     }
 
     scanner.close();

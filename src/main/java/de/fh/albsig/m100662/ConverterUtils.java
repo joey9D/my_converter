@@ -163,7 +163,7 @@ public class ConverterUtils {
      * Convert numerical value according to chosen result unit.
      */
     public void convertLength() {
-      System.out.println("\nChoose a result unti:");
+      System.out.println("\nChoose a result unit:");
 
       Scanner unitScanner = new Scanner(System.in, StandardCharsets.UTF_8);
       String resultUnit = unitScanner.nextLine();
