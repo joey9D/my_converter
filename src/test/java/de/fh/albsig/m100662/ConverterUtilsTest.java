@@ -23,13 +23,11 @@ public class ConverterUtilsTest {
 
   @BeforeAll
   static void setUpClass() {
-    //System.out.println("Initialisiere Tests...");
     logger.info("Initialize tests ...");
   }
 
   @AfterAll
   static void tearDownClass() {
-    //System.out.println("Beende Tests...");
     logger.info("Finished tests.");
   }
 
