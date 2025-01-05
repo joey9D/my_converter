@@ -69,7 +69,6 @@ public class Main {
       ConverterUtils.Lengths lengthInput = (ConverterUtils.Lengths) inputNumber;
       lengthInput.printLengthUnits();
       lengthInput.convertLength();
-      logger.info("Converting ...");
       logger.info("Converted number is " + lengthInput.getValue() + " " + lengthInput.getUnit());
     }
 
