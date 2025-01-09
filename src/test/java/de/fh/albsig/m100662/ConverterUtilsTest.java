@@ -33,10 +33,10 @@ public class ConverterUtilsTest {
 
   @BeforeEach
   void setUp() {
-  outputStream = new ByteArrayOutputStream();
-  originalOut = System.out;
-  System.setOut(new PrintStream(outputStream));
-}
+    outputStream = new ByteArrayOutputStream();
+    originalOut = System.out;
+    System.setOut(new PrintStream(outputStream));
+  }
   
   @AfterEach
   void tearDown() {
@@ -65,7 +65,8 @@ public class ConverterUtilsTest {
   void testPrintNumber() {
     ConverterUtils.NewNumber number = new ConverterUtils.NewNumber(BigDecimal.valueOf(15), "km");
     number.printNumber();
-    assertEquals("Input: 15 km\n", outputStream.toString());
+    String expectedOutput = "Input: 15 km" + System.lineSeparator();
+    assertEquals(expectedOutput, outputStream.toString());
   }
 
   @Test
